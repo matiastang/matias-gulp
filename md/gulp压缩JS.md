@@ -2,7 +2,7 @@
  * @Author: tangdaoyong
  * @Date: 2020-12-30 18:52:59
  * @LastEditors: tangdaoyong
- * @LastEditTime: 2020-12-31 11:08:01
+ * @LastEditTime: 2020-12-31 11:13:38
  * @Description: gulp 压缩 JS
 -->
 
@@ -62,7 +62,7 @@ gulp
 yarn add --dev del
 ```
 * 添加`task`
-注意使用[`del`](https://github.com/sindresorhus/del)需要异步。
+注意使用[del](https://github.com/sindresorhus/del)需要异步。
 ```
 const del = require('del');
 
