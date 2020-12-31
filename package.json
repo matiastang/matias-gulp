@@ -1,0 +1,19 @@
+{
+  "name": "matias-gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/matiastang/matias-gulp.git",
+  "author": "matiastang <18380449615@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "vinyl-paths": "^3.0.1"
+  }
+}
