@@ -157,16 +157,46 @@ const gulpAsyncTask = (obj, func, ...arguments) => {
     };
 };
 
-const gulpFileTasks = function() {
-    return {
-        script: gulpTask(gulpCSS, 'script', gulp, plugins),
-        clear: gulpAsyncTask(gulpCSS, 'clear_js', gulp, plugins)
+// const gulpFileTasks = function() {
+//     return {
+//         script: gulpTask(gulpCSS, 'script', gulp, plugins),
+//         clear: gulpAsyncTask(gulpCSS, 'clear_js', gulp, plugins)
+//     }
+// };
+
+const gulpFileTasks = function(fileObj) {
+    let tasks = {}
+    for (let [key, value] of Object.entries(fileObj)) {
+        console.log(`key: ${key}, value: ${value}`)
+        if (value.startsWith('[Function')) {
+            tasks[key] = gulpTask(fileObj, key, gulp, plugins)
+        } else {
+            tasks[key] = gulpTask(fileObj, key, gulp, plugins)
+        }
     }
+    return tasks
 };
-console.log(gulpFileTasks());
+
+const gulpFilesTasks = () => {
+    let tasks = {}
+    gulpTaskList.forEach(function(fileName) {
+        let fileObj = require(`./gulp/tasks/${fileName}`);
+        let fileTasks = gulpFileTasks(fileObj);
+        Object.assign(tasks, fileTasks);
+    });
+    return tasks;
+}
+
+
+// console.log(gulpFileTasks());
 // exports.clear = gulpTasks();
 
-module.exports = gulpFileTasks();
+console.log(gulpTaskList);
+let allTasks = gulpFilesTasks();
+console.log(allTasks);
+
+// module.exports = gulpFileTasks();
+module.exports = allTasks;
 
 // exports = gulpCSS.reduce(function(obj, item, index, arr) {
 //     return obj[]
