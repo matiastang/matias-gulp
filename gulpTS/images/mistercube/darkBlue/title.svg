@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="26" viewBox="0 0 100 26">
+<defs>
+<style>.a{fill:#2f4dca;}.b,.c{fill:#01141E;}.c{stroke:#01141E;stroke-width:0.6px;}</style>
+</defs>
+<g transform="translate(-1294 -445)">
+<rect class="a" width="26" height="100" transform="translate(1394 445) rotate(90)"/>
+<g transform="translate(620)">
+<rect class="b" width="3" height="3" transform="translate(692 450) rotate(90)"/>
+<rect class="b" width="3" height="3" transform="translate(692 463) rotate(90)"/>
+<path class="c" d="M0,9V-1.985" transform="translate(690.5 454.5)"/>
+</g>
+</g>
+</svg>

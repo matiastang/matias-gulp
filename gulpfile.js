@@ -139,8 +139,11 @@ console.log(gulpCSS);
  * @return {*}
  */
 const gulpTask = (obj, func, ...arguments) => {
-    return (cb) => {
-        obj[func](...arguments, cb);
+    /*
+    如果任务（task）不返回任何内容，则必须使用 callback 来指示任务已完成。在如下示例中，callback 将作为唯一一个名为 cb() 的参数传递给你的任务（task）。
+    */
+    return () => {
+        return obj[func](...arguments);
     };
 };
 
@@ -164,16 +167,42 @@ const gulpAsyncTask = (obj, func, ...arguments) => {
 //     }
 // };
 
+// module.exports = gulpFileTasks();
+
 const gulpFileTasks = function(fileObj) {
     let tasks = {}
-    for (let [key, value] of Object.entries(fileObj)) {
-        console.log(`key: ${key}, value: ${value}`)
-        if (value.startsWith('[Function')) {
-            tasks[key] = gulpTask(fileObj, key, gulp, plugins)
-        } else {
-            tasks[key] = gulpTask(fileObj, key, gulp, plugins)
+    for (const key in fileObj) {
+        if (Object.hasOwnProperty.call(fileObj, key)) {
+            const element = fileObj[key];
+            /*
+            使用这个：Object.prototype.toString.call(fn);如果输出"[object AsyncFunction]"那就是async函数，否则是普通函数
+
+            let fn = async () => {}
+            fn.constructor.name 返回的是 Function
+            Object.prototype.toString.call(fn) 也是返回 Function
+            看起来这个判定对于箭头函数不奏效
+
+            */
+            let funcString = Object.prototype.toString.call(element);
+            console.log(element.constructor.name);
+            console.log(funcString);
+            console.log(typeof funcString);
+            if (funcString.endsWith('AsyncFunction]')) {
+                tasks[key] = gulpAsyncTask(fileObj, key, gulp, plugins)
+            } else {
+                tasks[key] = gulpTask(fileObj, key, gulp, plugins)
+            }
         }
     }
+    // for (let [key, value] of Object.entries(fileObj)) {
+    //     console.log(`key: ${key}, value: ${value}`)
+    //     console.log(typeof value);
+    //     if (value.startsWith('[Function')) {
+    //         tasks[key] = gulpTask(fileObj, key, gulp, plugins)
+    //     } else {
+    //         tasks[key] = gulpAsyncTask(fileObj, key, gulp, plugins)
+    //     }
+    // }
     return tasks
 };
 
@@ -181,6 +210,7 @@ const gulpFilesTasks = () => {
     let tasks = {}
     gulpTaskList.forEach(function(fileName) {
         let fileObj = require(`./gulp/tasks/${fileName}`);
+        console.log(fileObj);
         let fileTasks = gulpFileTasks(fileObj);
         Object.assign(tasks, fileTasks);
     });
@@ -195,7 +225,6 @@ console.log(gulpTaskList);
 let allTasks = gulpFilesTasks();
 console.log(allTasks);
 
-// module.exports = gulpFileTasks();
 module.exports = allTasks;
 
 // exports = gulpCSS.reduce(function(obj, item, index, arr) {

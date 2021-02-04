@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90.5" height="92.5" viewBox="0 0 90.5 92.5">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1875f0"/>
+      <stop offset="0.523" stop-color="#4281d3"/>
+      <stop offset="1" stop-color="#2f4dca" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="组_15887" data-name="组 15887" transform="translate(-40.5 -3842.5)">
+    <rect id="矩形_3739" data-name="矩形 3739" width="90" height="1" transform="translate(41 3934)" fill="url(#linear-gradient)"/>
+    <rect id="矩形_3740" data-name="矩形 3740" width="90" height="1" transform="translate(40.5 3932.5) rotate(-90)" fill="url(#linear-gradient)"/>
+    <g id="组_15825" data-name="组 15825" transform="translate(-710 2889)">
+      <g id="组_2121" data-name="组 2121" transform="translate(757 1022)">
+        <rect id="矩形_277" data-name="矩形 277" width="9" height="29" transform="translate(0 13) rotate(-90)" fill="#1875f0" opacity="0.48"/>
+        <rect id="矩形_3735" data-name="矩形 3735" width="9" height="29" transform="translate(3 9) rotate(-90)" fill="#1875f0"/>
+      </g>
+    </g>
+  </g>
+</svg>
+

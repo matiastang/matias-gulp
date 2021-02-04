@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="85.756" viewBox="0 0 16 85.756">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.5" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3fc2c2"/>
+      <stop offset="1" stop-color="#206d75"/>
+    </linearGradient>
+  </defs>
+  <g id="组_2116" data-name="组 2116" transform="translate(-624 -4155.244)">
+    <path id="联合_4" data-name="联合 4" d="M0,16V0H16V2H2V16Z" transform="translate(640 4241) rotate(180)" fill="#3fc2c2"/>
+    <rect id="矩形_276" data-name="矩形 276" width="11" height="3" transform="translate(625 4209)" fill="url(#linear-gradient)"/>
+    <rect id="矩形_276-2" data-name="矩形 276" width="11" height="3" transform="translate(625 4214)" fill="url(#linear-gradient)"/>
+    <rect id="矩形_276-3" data-name="矩形 276" width="11" height="3" transform="translate(625 4219)" fill="url(#linear-gradient)"/>
+    <rect id="矩形_276-4" data-name="矩形 276" width="11" height="3" transform="translate(625 4224)" fill="url(#linear-gradient)"/>
+    <rect id="矩形_276-5" data-name="矩形 276" width="11" height="3" transform="translate(625 4229)" fill="url(#linear-gradient)"/>
+    <rect id="矩形_276-6" data-name="矩形 276" width="11" height="3" transform="translate(625 4234)" fill="url(#linear-gradient)"/>
+    <path id="路径_1076" data-name="路径 1076" d="M6823.336,4371.059l7.417-7.417v-42.4" transform="translate(-6196 -166)" fill="none" stroke="#3fc2c2" stroke-width="1"/>
+  </g>
+</svg>

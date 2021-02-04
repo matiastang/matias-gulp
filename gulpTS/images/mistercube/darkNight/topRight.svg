@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="92" viewBox="0 0 92 92">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3, .cls-4 {
+        fill: #5dc4fc;
+      }
+
+      .cls-4 {
+        opacity: 0.525;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1.044" y1="3.347" x2="-0.025" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5dc4fc"/>
+      <stop offset="0.523" stop-color="#5dc4fc"/>
+      <stop offset="1" stop-color="#5dc4fc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="组_15732" data-name="组 15732" transform="translate(-1258 -752)">
+    <g id="组_251" data-name="组 251" transform="translate(1258 751)">
+      <rect id="矩形_42" data-name="矩形 42" class="cls-2" width="90" height="1" transform="translate(92 2) rotate(180)"/>
+      <rect id="矩形_55" data-name="矩形 55" class="cls-2" width="90" height="1" transform="translate(92 2) rotate(90)"/>
+    </g>
+    <g id="组_2119" data-name="组 2119" transform="translate(3 -2)">
+      <rect id="矩形_278" data-name="矩形 278" class="cls-3" width="9" height="29" transform="translate(1337 765) rotate(90)"/>
+      <rect id="矩形_277" data-name="矩形 277" class="cls-4" width="9" height="29" transform="translate(1340 761) rotate(90)"/>
+    </g>
+  </g>
+</svg>

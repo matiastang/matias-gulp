@@ -2,12 +2,12 @@
  * @Author: tangdaoyong
  * @Date: 2020-12-31 15:39:51
  * @LastEditors: tangdaoyong
- * @LastEditTime: 2020-12-31 18:10:07
+ * @LastEditTime: 2021-02-02 18:33:50
  * @Description: file content
  */
-const script = function (gulp, plugins, cb) {
+const script = function (gulp, plugins) {
     console.log('script->');
-    gulp.src('src/js/*.js')// 找到文件
+    return gulp.src('src/js/*.js')// 找到文件
         .pipe(plugins.babel({
             presets: ['@babel/env']
         }))// 处理JS兼容处理
@@ -15,7 +15,6 @@ const script = function (gulp, plugins, cb) {
         .pipe(plugins.uglify())// 压缩文件
         .pipe(plugins.rename({ extname: '.min.js' }))// 重命名
         .pipe(gulp.dest('dist/js'));// 另存压缩后的文件
-        cb();
 };
 
 const clear_js = async function (gulp, plugins, cb) {

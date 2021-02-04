@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" width="21.078" height="21.796" viewBox="0 0 21.078 21.796">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5dc4fc;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.5" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#92d9ff"/>
+      <stop offset="1" stop-color="#5dc4fc"/>
+    </linearGradient>
+  </defs>
+  <g id="组_2128" data-name="组 2128" transform="translate(-40 -4219.204)">
+    <path id="联合_3" data-name="联合 3" class="cls-1" d="M0,0V16H16V14H2V0Z" transform="translate(40 4225)"/>
+    <path id="路径_1074" data-name="路径 1074" class="cls-2" d="M6821.047,4577.1v15.976h15.483Z" transform="translate(-6775.453 -357.892)"/>
+  </g>
+</svg>
